@@ -1,0 +1,4 @@
+Player2,20
+Player1,40
+hstoklosa,115
+hstoklosa,70

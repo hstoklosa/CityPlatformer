@@ -103,23 +103,26 @@ public class GameSaverLoader {
             String line = reader.readLine();
             String[] levelInfo = line.split(",");
 
-
             if (levelInfo[1] != null) {
-                if (levelInfo[1].equals("Level1"))
+                String levelName = levelInfo[1];
+
+                if (levelName.equals("Level1"))
                     level = new Level1(game);
-                if (levelInfo[1].equals("Level2"))
+
+                if (levelName.equals("Level2"))
                     level = new Level2(game);
-                if (levelInfo[1].equals("Level3"))
+
+                if (levelName.equals("Level3"))
                     level = new Level3(game);
             }
 
             level.getPlayer().setName(levelInfo[0]);
-
             line = reader.readLine();
 
             while (line != null) {
                 String[] tokens = line.split(",");
                 String entity = tokens[0];
+
                 float x = Float.parseFloat(tokens[1]);
                 float y = Float.parseFloat(tokens[2]);
 
@@ -138,8 +141,12 @@ public class GameSaverLoader {
                         ShootingEnemy se = new ShootingEnemy(level, new Vec2(x, y));
                         se.setHealth(Integer.parseInt(tokens[3]));
                     }
-                    case "Melon" -> new MelonPickup(level, new Vec2(x, y));
-                    case "Coin" -> new CoinPickup(level, new Vec2(x, y));
+                    case "Melon" -> {
+                        new MelonPickup(level, new Vec2(x, y));
+                    }
+                    case "Coin" -> {
+                        new CoinPickup(level, new Vec2(x, y));
+                    }
                     case "Chest" -> {
                         ChestPickup cp = new ChestPickup(level, new Vec2(x, y));
                         cp.setHits(Integer.parseInt(tokens[3]));

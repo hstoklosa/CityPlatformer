@@ -76,7 +76,7 @@ public class Game extends JFrame {
     }
 
     public void startGame(String nickname) {
-        startGame(nickname, new Level1(this));
+        startGame(nickname, new Level3(this));
         this.level.populate();
     }
 
@@ -131,7 +131,7 @@ public class Game extends JFrame {
         switchPanel(layeredPanel, startMenu.getMainPanel());
 
         // Optional: uncomment this to make a debugging view
-         JFrame debugView = new DebugViewer(level, 500, 500);
+        // JFrame debugView = new DebugViewer(level, 500, 500);
 
         // Optional: draw a 1-metre grid over the view
         // view.setGridResolution(1);
@@ -232,7 +232,7 @@ public class Game extends JFrame {
     /**
      * Switches panels in a JFramed.
      * <p>
-     * This implementation appropriately removes and adds panels, and then revalides with the JFrame. It helps to keep the code DRY by not having to repeat the same lines of code over again.
+     * This implementation appropriately removes and adds panels, and then revalidates with the JFrame. It helps to keep the code DRY by not having to repeat the same lines of code over again.
      *
      * @param  newPanel the JComponent to be added
      * @param  oldPanel the JComponent to be removed

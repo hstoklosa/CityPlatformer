@@ -12,7 +12,6 @@ import java.awt.*;
  * @since       2.0
  */
 public class EndMenu {
-
     private JPanel endPanel;
     private JButton quitButton;
     private JLabel endText;
@@ -20,6 +19,7 @@ public class EndMenu {
     private JLabel endText2;
     private JButton mmButton;
     private JLabel endText3;
+    private JPanel buttonPanel;
 
     public EndMenu(Game game) {
         endPanel.setBackground(Color.WHITE);
@@ -43,15 +43,24 @@ public class EndMenu {
         endText3.setFont(textFont);
         endText3.setBorder(titleMargin);
 
+        buttonPanel.setBackground(Color.WHITE);
+        buttonPanel.setLayout(new GridLayout(2, 1));
+        buttonPanel.setMaximumSize(new Dimension(250, 400));
+
+        Font buttonFont = Game.font.deriveFont(10f);
+
         mmButton.setBackground(Color.WHITE);
-        mmButton.addActionListener(e -> {
-            System.exit(0);
-        });
+        mmButton.setFont(buttonFont);
+        mmButton.addActionListener(e -> System.exit(0));
 
         quitButton.setBackground(Color.WHITE);
-        quitButton.addActionListener(e -> {
-            System.exit(0);
-        });
+        quitButton.setFont(buttonFont);
+        quitButton.addActionListener(e -> System.exit(0));
+
+        mmButton.setPreferredSize(new Dimension(20, 40));
+        quitButton.setPreferredSize(new Dimension(20, 40));
+
+
     }
 
     public JPanel getMainPanel() {

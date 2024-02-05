@@ -78,11 +78,11 @@ public class StartMenu {
         TextPrompt tp = new TextPrompt("Enter your username...", nameField);
         Insets textFieldPadding = new Insets(10, 5, 10, 5);
         Border textFieldMargin = BorderFactory.createEmptyBorder(0, 0, 20, 0);
+
         nameField.setMargin(textFieldPadding);
 
         // combine original and new border
         nameField.setBorder(BorderFactory.createCompoundBorder(textFieldMargin, nameField.getBorder()));
-
 
         // button to start the game with the given nickname
         startButton.addActionListener(e -> {

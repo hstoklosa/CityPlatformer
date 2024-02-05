@@ -1,4 +1,9 @@
-Player2,20
-Player1,40
 hstoklosa,115
-hstoklosa,70
+P2,100
+P3,90
+P4,80
+P5,70
+P6,60
+P7,50
+P8,40
+P9,30

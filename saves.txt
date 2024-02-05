@@ -1,8 +1,8 @@
 hstoklosa,Level2
-SimpleEnemy,-1.6844376,-7.044,100
-ShootingEnemy,5.0652204,7.765001,40
-Player,-11.253752,3.9094436,70,35
-Coin,-2.9850557,-0.23500004
+SimpleEnemy,-2.2065325,-8.985001,100
+ShootingEnemy,-3.0,-0.21233337,100
+ShootingEnemy,5.0,7.787667,100
+Player,-18.0,8.0149555,100,0
 Chest,17.0,7.5,3
 Coin,-15.0,-9.0
 Coin,-18.0,-9.0

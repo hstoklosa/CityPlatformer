@@ -36,6 +36,6 @@ public class SpikeEnemy extends StaticBody {
             public void endContact(SensorEvent sensorEvent) {}
         });
 
-        setAlwaysOutline(true);
+        // setAlwaysOutline(true);
     }
 }

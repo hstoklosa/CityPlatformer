@@ -67,7 +67,7 @@ public class Level1 extends Level {
 
     @Override
     public void populate() {
-        this.getPlayer().setPosition(new Vec2(8, -10));
+        this.getPlayer().setPosition(new Vec2(11, -10));
         Player.SPAWN_SOUND.play();
 
         // load enemies
@@ -79,7 +79,7 @@ public class Level1 extends Level {
         // load pickups
         new MelonPickup(this, new Vec2(-8.5f, 7f));
         new CoinPickup(this, new Vec2(10f, -10f));
-        new CoinPickup(this, new Vec2(5f, -10f));
+        new CoinPickup(this, new Vec2(5f, -8.5f));
         new CoinPickup(this, new Vec2(13f, 8f));
         new CoinPickup(this, new Vec2(10f, 8f));
         new CoinPickup(this, new Vec2(13f, 11f));

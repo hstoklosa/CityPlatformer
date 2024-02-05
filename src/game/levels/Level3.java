@@ -37,11 +37,10 @@ public class Level3 extends Level {
         LiftPlatform lift = new LiftPlatform(this, new Vec2(-12f, -3.75f), LiftPlatform.Type.HORIZONTAL, 14);
         lift.addImage(Level.BROWN_PLATFORM);
 
-//        Shape platformShape2 = new BoxShape(1.5f, 0.85f);
-//        Platform platform2 = new Platform(this, platformShape2);
-//        platform2.setPosition(new Vec2(-15.5f, -8f));
-//        new AttachedImage(platform2, SUB_TILE, 1.7f, 0f, new Vec2(-0f, 0));
-
+        // Shape platformShape2 = new BoxShape(1.5f, 0.85f);
+        // Platform platform2 = new Platform(this, platformShape2);
+        // platform2.setPosition(new Vec2(-15.5f, -8f));
+        // new AttachedImage(platform2, SUB_TILE, 1.7f, 0f, new Vec2(-0f, 0));
 
         Shape subPlatformShape = new BoxShape(1.5f, Level.DEFAULT_SUBTILE_SCALE * 3); // hh = 0.80f
 
@@ -91,7 +90,7 @@ public class Level3 extends Level {
 
         // Suspended platform 2
         Platform platform10 = new Platform(this, platformShape1);
-        platform10.setPosition(new Vec2(7f, -5f));
+        platform10.setPosition(new Vec2(7.02f, -5f));
         platform10.fillPlatform(TILE, Level.DEFAULT_TILE_SCALE, 0f, Level.DEFAULT_TILE_SCALE, 1.5f);
 
         Platform platform11 = new Platform(this, subPlatformShape);
@@ -99,7 +98,7 @@ public class Level3 extends Level {
         platform11.fillPlatformVertical(SUB_TILE, 1.7f, 0f, 1.5f, Level.DEFAULT_SUBTILE_SCALE * 3);
 
         Platform platform12 = new Platform(this, subPlatformShape);
-        platform12.setPosition(new Vec2(8.45f, -11f));
+        platform12.setPosition(new Vec2(8.6f, -11f));
         platform12.fillPlatformVertical(SUB_TILE, 1.7f, 0f, 1.5f, Level.DEFAULT_SUBTILE_SCALE * 3);
 
         // Suspended platform 3
@@ -122,11 +121,11 @@ public class Level3 extends Level {
 
         // Suspended platform 5
         Platform platform17 = new Platform(this, platformShape1);
-        platform17.setPosition(new Vec2(16.5f, -3.5f));
+        platform17.setPosition(new Vec2(19.5f, -3.5f));
         platform17.fillPlatform(TILE, Level.DEFAULT_TILE_SCALE, 0f, Level.DEFAULT_TILE_SCALE, 1.5f);
 
         Platform platform18 = new Platform(this, subPlatformShape);
-        platform18.setPosition(new Vec2(17.5f, -8.5f));
+        platform18.setPosition(new Vec2(17.25f, -8.5f));
         platform18.fillPlatformVertical(SUB_TILE, 1.7f, 0f, 1.5f, Level.DEFAULT_SUBTILE_SCALE * 3);
 
         Platform platform19 = new Platform(this, subPlatformShape);
@@ -158,10 +157,10 @@ public class Level3 extends Level {
         new CoinPickup(this, new Vec2(-1f, 1.25f));
         new CoinPickup(this, new Vec2(1f, 3.25f));
 
-        new ShootingEnemy(this, new Vec2(9.5f, 10f));
-        new ShootingEnemy(this, new Vec2(6f, -3.5f));
-//
-        new Portal(this, new Vec2(16.5f, 1.5f));
+        new ShootingEnemy(this, new Vec2(10.5f, 10f));
+        new ShootingEnemy(this, new Vec2(7f, -3.5f));
+
+        new Portal(this, new Vec2(18f, 0.7f));
     }
 
     @Override

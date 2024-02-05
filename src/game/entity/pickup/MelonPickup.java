@@ -28,7 +28,7 @@ public class MelonPickup extends Pickup {
     public void applyPickup(CollisionEvent e) {
         Player p = (Player) e.getReportingBody();
 
-        p.setHealth(p.getHealth() + 5);
+        p.setHealth(p.getHealth() + 15);
         e.getOtherBody().destroy();
 
         if (p.getHealth() >= 100) p.setHealth(100);
